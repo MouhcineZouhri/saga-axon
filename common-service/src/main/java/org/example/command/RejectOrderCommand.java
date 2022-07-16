@@ -1,0 +1,13 @@
+package org.example.command;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.axonframework.modelling.command.TargetAggregateIdentifier;
+
+@Data
+@AllArgsConstructor @NoArgsConstructor
+public class RejectOrderCommand {
+    @TargetAggregateIdentifier
+    private String orderId;
+}
